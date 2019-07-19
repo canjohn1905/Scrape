@@ -7,6 +7,13 @@ $(function () {
     });
   });
 
+  //BTH SAVE//
+  $(".btn-save").on("click", function () {
+    $.get("/article", (data) => {
+      location.reload();
+    });
+  });
+
   // Grab the articles as a json
   $.getJSON("/articles", function (data) {
     // For each one

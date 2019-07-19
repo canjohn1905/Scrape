@@ -40,6 +40,23 @@ mongoose.connect(MONGODB_URI);
 
 
 // Routes
+app.get("/article", (req, res) => {
+  db.Article.find({
+  saved: true
+  })
+    .then((dbArticle) => {
+      // If all Users are successfully found, send them back to the client
+      const hbsObject = {
+        articles: dbArticle
+      };
+      res.render("home", hbsObject);
+
+    })
+    .catch((err) => {
+      // If an error occurs, send the error back to the client
+      res.json(err);
+    });
+});
 app.get("/", (req, res) => {
   db.Article.find({})
     .then((dbArticle) => {
