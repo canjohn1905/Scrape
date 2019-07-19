@@ -14,7 +14,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,12 +27,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/saved">Saved Articles</a>
                 </li>
-                <li class="nav-item">
+                {{!-- <li class="nav-item">
                     <a class="nav-link" id="scrape" href="/scrape">Scrape</a>
-                </li>     
+                </li>      --}}
             </ul>
         </div>
     </nav>
+{{!-- HEADER BEGINS--}}
+   <div class="hero-image">
+  <div class="hero-text">
+    <h1>GET THE LATEST NEWS </h1>
+    <p>Try now</p>
+    <button class="nav-link btnScr" id="scrape" href="/scrape">Scrape</button>
+  </div>
+</div>
     {{{ body }}}
 
     <!--External JS Link-->

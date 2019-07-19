@@ -22,6 +22,11 @@ var ArticleSchema = new Schema({
     required: true
   },
 
+  isSaved: {
+    type: Boolean,
+    default:false
+  },
+
   image:  String,
   
   // `note` is an object that stores a Note id
